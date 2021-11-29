@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/calc-icon.png">
+        <title>Calcutredora</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /*Tots els botons menys l'igual*/
+            .btn{
+                width: 100px;
+                padding: 30px;
+                font-size: 28px;
+                background-color: gray;
+                border-radius: 15px;
+                border: none;
+                color: white;
+            }
+            /*Botó igual*/
+            .btn2{
+                width: 100px;
+                padding: 30px;
+                font-size: 28px;
+                background-color: tomato;
+                border-radius: 15px;
+                border: none;
+                color: white;
+            }
+            /*Hover per als botons numèrics*/
+            .btn2:hover{
+                background-color: rgb(255, 129, 107);
+            }
+            .btn:hover{
+                background-color: rgb(179, 179, 179);
+            }
+            /*Input text*/
+            #txtfield{
+                width: 450px;
+                height: 60px;
+                background-color: gray;
+                color: white;
+                font-size: 22px;
+                border-radius: 15px;
+                border: none;
+                margin-bottom: 10px;
+                padding-left: 15px;
+            }
+            /*Estil placeholder input text*/
+            #txtfield::placeholder{
+                text-align: center;
+                color: white;
+                font-size: 16px;
+            }
+            #txtfield:hover{
+                background-color: rgb(179, 179, 179);
+            }
+            table{
+                background-color: black;
+                padding: 5px;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+            <h1>CALCUTREDORA</h1>
+            <table>
+                <form name="calculadora">
+                    <!--Primera fila textfield-->
+                <tr>
+                    <td colspan="4"><input id="txtfield" type="textfield" name="ans" value="" placeholder="Benvingut a la calcutredora!"></td>
+                </tr>
+                    <!--Segona fila números '1..+'-->
+                <tr align="center">
+                    <td><input class="btn" type="button" value="1" onClick="document.calculadora.ans.value+='1'"></td>
+                    <td><input class="btn" type="button" value="2" onClick="document.calculadora.ans.value+='2'"></td>
+                    <td><input class="btn" type="button" value="3" onClick="document.calculadora.ans.value+='3'"></td>
+                    <td><input class="btn" type="button" value="+" onClick="document.calculadora.ans.value+='+'"></td>
+                </tr>
+                    <!--Tercera fila números '4..-'-->
+                <tr align="center">
+                    <td><input class="btn" type="button" value="4" onClick="document.calculadora.ans.value+='4'"></td>
+                    <td><input class="btn" type="button" value="5" onClick="document.calculadora.ans.value+='5'"></td>
+                    <td><input class="btn" type="button" value="6" onClick="document.calculadora.ans.value+='6'"></td>
+                    <td><input class="btn" type="button" value="-" onClick="document.calculadora.ans.value+='-'"></td>
+                </tr>
+                    <!--Quarta fila números '7..*'-->
+                <tr align="center">
+                    <td><input class="btn" type="button" value="7" onClick="document.calculadora.ans.value+='7'"></td>
+                    <td><input class="btn" type="button" value="8" onClick="document.calculadora.ans.value+='8'"></td>
+                    <td><input class="btn" type="button" value="9" onClick="document.calculadora.ans.value+='9'"></td>
+                    <td><input class="btn" type="button" value="*" onClick="document.calculadora.ans.value+='*'"></td>
+                </tr>
+                    <!--Quinta fila números '0..='-->
+                <tr align="center">
+                    <td><input class="btn" type="button" value="0" onClick="document.calculadora.ans.value+='0'"></td>
+                    <td><input class="btn" type="reset" value="C"></td>
+                    <td><input class="btn" type="button" value="/" onClick="document.calculadora.ans.value+='/'"></td>
+                    <td><input class="btn2" type="button" value="=" onClick="document.calculadora.ans.value=eval(document.calculadora.ans.value)"></td>
+                </tr>
+                </form>
+            </table>
+    </body>
+</html>

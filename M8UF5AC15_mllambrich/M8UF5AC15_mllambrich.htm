@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulari d'enviament</title>
+        <style>
+            body{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            tr:first-child{
+                background-color: #306090;
+            }
+            h2{
+                color: white;
+                display: inline;
+                ;
+            }
+            img{
+                float: right;
+            }
+            .label1{
+                text-align: right;
+                width: 35%;
+                font-size: 18px;
+            }
+            table{
+                background-color: #EFEFEF;
+            }
+            label{
+                display: block;
+            }
+        </style>
+        <script type="text/javascript">
+            function validar() {
+                var passwd=document.getElementsById("psswd").value;
+                var confpsswd=document.getElementById("confpsswd").value;
+                if(psswd==confpsswd){
+                    return true;
+                }
+                else{
+                    alert("No coincideix");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table align="center" width="75%">
+            <form action="mailto:marina.llambrich@inslapineda.cat" onsubmit="return validar();" method="get">
+                <tr>
+                    <td colspan="2"><h2>Enviar missatge</h2><img src="img/gb_reload_s.gif" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>Usuari:</strong></td>
+                    <td><input type="text" maxlength="8" required></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>Contrasenya:</strong></td>
+                    <td><input type="password" id="psswd" required></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>Confirmar contrasenya:</strong></td>
+                    <td><input type="password" id="confpsswd" required></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>Nom:</strong></td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>E-mail:</strong></td>
+                    <td><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>Arxiu:</strong></td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td class="label1"><strong>Imatge:</strong></td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-size: 12px;">El tamany de l'arxiu i la imatge no pot excedir els 4 KBytes</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>Requereixo resposta:</strong>
+                    <input type="radio" name="resposta" value="si">Sí
+                    <input type="radio" name="resposta" value="no">No</td>
+                </tr>
+                <tr>
+                    <td class="label1" style="vertical-align: top;"><strong>Quins jocs t'interessen?</strong></td>
+                    <td>
+                        <label for=""><input type="checkbox" name="jocs" value="parchis">Parchís</label>
+                        <label for=""><input type="checkbox" name="jocs" value="cinquillo">Cinquillo</label>
+                        <label for=""><input type="checkbox" name="jocs" value="solitario">Solitario</label>
+                        <label for=""><input type="checkbox" name="jocs" value="damas">Damas</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; font-size: 18px;"><strong>Misstge</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div align="center"><textarea name="" id="" cols="45" rows="5" required></textarea></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

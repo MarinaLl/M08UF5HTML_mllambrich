@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulari 1 d'enregistrament</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            label{
+                display: block;
+                margin: 20px;
+            }
+            label textarea{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Formulari bàsic de registre</h1>
+        <form action="" method="get">
+            <label for="">NOM:
+                <input type="text" name="nom" maxlength="50">
+            </label>
+            <label for="">COGNOM:
+                <input type="text" name="cognom" maxlength="50">
+            </label>
+            <label for="">SEXE:
+                <input type="radio" name="sexe" value="home">Home
+                <input type="radio" name="sexe" value="dona">Dona
+            </label>
+            <label for="">CORREU ELECTRÒNIC:
+                <input type="email" name="mail">
+            </label>
+            <label for="">
+                <input type="checkbox" name="" id="" checked>Vull rebre informació sobre novetats i ofertes
+            </label>
+            <label for="">
+                <input type="checkbox" name="" id="">Declaro haver llegit i acceptar les condicions generals del programa i la normativa osbre protecció de dades indicada al RGPD
+            </label>
+            <label for="">POBLACIÓ:
+                <select name="població" id="">
+                    <option value="arbúcies">Arbúcies</option>
+                    <option value="badalona">Badalona</option>
+                    <option value="barcelona">Barcelona</option>
+                    <option value="girona">Girona</option>
+                    <option value="vilassar-de-mar">Vilassar de Mar</option>
+                </select>
+            </label>
+            <label for="">DESCRIPCIÓ:
+                <textarea name="descripció" id="" cols="40" rows="5" placeholder="Insertar descripció"></textarea>
+            </label>
+            <input type="submit" style="margin-left: 20px;" value="Enviar">
+        </form>
+    </body>
+</html>
